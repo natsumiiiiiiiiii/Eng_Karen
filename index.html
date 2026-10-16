@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karen Joyce Adic — Electrical Design Engineer Portfolio</title>
+    <title>Karen Joyce Adic — Electrical Design Consultant</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,9 +11,18 @@
             theme: {
                 extend: {
                     colors: {
-                        dark: '#0f172a',
-                        card: '#1e293b',
-                        accent: '#38bdf8'
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#944900',
+                            900: '#b85b00',
+                            dark: '#612a00'
+                        },
+                        card: '#1c1917',
+                        surface: '#262220'
                     }
                 }
             }
@@ -22,170 +31,296 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-dark text-slate-100 font-sans antialiased selection:bg-accent selection:text-dark">
+<body class="bg-brand-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Decorative Flourish (Inspired by Card Graphics) -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-25">
+        <div class="absolute -top-32 -right-32 w-[600px] h-[300px] rounded-full border-[18px] border-amber-300 transform rotate-45"></div>
+        <div class="absolute -bottom-40 -left-32 w-[700px] h-[350px] rounded-full border-[22px] border-amber-300 transform -rotate-12"></div>
+    </div>
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-lg font-bold tracking-wider text-white">KJA<span class="text-accent">.</span></a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-accent transition">About</a>
-                <a href="#skills" class="hover:text-accent transition">Skills</a>
-                <a href="#experience" class="hover:text-accent transition">Experience</a>
-                <a href="#contact" class="hover:text-accent transition">Contact</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 text-lg font-bold tracking-wider text-white">
+                <img src="Karen_Logo.png" alt="Karen Joyce Adic Logo" class="h-10 w-10 object-contain rounded-full bg-white/10 p-0.5">
+                <span>KJA<span class="text-brand-500">.</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
+                <a href="#about" class="hover:text-amber-300 transition">About</a>
+                <a href="#skills" class="hover:text-amber-300 transition">Skills</a>
+                <a href="#projects" class="hover:text-amber-300 transition">Projects</a>
+                <a href="#experience" class="hover:text-amber-300 transition">Experience</a>
+                <a href="#contact" class="hover:text-amber-300 transition">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="https://linkedin.com/in/karen-joyce-adic" target="_blank" class="text-slate-300 hover:text-accent transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                <a href="mailto:karenadic.work@gmail.com" class="text-slate-300 hover:text-accent transition"><i class="fa-solid fa-envelope text-lg"></i></a>
+                <a href="https://linkedin.com/in/karen-joyce-adic" target="_blank" class="text-slate-200 hover:text-amber-300 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="mailto:karenadic.work@gmail.com" class="text-slate-200 hover:text-amber-300 transition"><i class="fa-solid fa-paper-plane text-lg"></i></a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-16 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-accent text-xs font-semibold uppercase tracking-widest mb-6">Electrical Design Engineer</span>
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-indigo-400">Karen Joyce Adic</span>.
+    <section class="min-h-screen relative z-10 flex items-center justify-center pt-24 pb-12 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand-dark/60 border border-amber-500/40 text-amber-300 text-xs font-semibold uppercase tracking-widest backdrop-blur-md">
+                <img src="Karen_Logo.png" alt="Logo" class="w-5 h-5 object-contain">
+                <span>Electrical Design Consultant</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Karen Joyce Adic
             </h1>
-            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Experienced in Building Services Design Consulting, delivering commercial, retail, hospitality, residential, and healthcare electrical systems conforming to international codes and standards.
+            <p class="text-lg sm:text-xl text-amber-100 max-w-2xl mx-auto leading-relaxed">
+                Dedicated to designing efficient and innovative electrical systems across commercial, residential, retail, and healthcare developments conforming to global building codes.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#experience" class="w-full sm:w-auto px-8 py-3 rounded-lg bg-accent text-dark font-semibold hover:bg-sky-400 transition shadow-lg shadow-sky-500/10">View Experience</a>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 font-semibold hover:bg-slate-700 transition">Get in Touch</a>
+
+            <!-- Quick Contact Badges (Matching Business Card) -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-medium pt-2">
+                <div class="flex items-center gap-2 bg-brand-dark/80 px-4 py-2.5 rounded-lg border border-amber-500/30">
+                    <i class="fa-solid fa-phone text-brand-500"></i>
+                    <span>WhatsApp/Viber: +63 915 083 4988</span>
+                </div>
+                <div class="flex items-center gap-2 bg-brand-dark/80 px-4 py-2.5 rounded-lg border border-amber-500/30">
+                    <i class="fa-solid fa-paper-plane text-brand-500"></i>
+                    <span>karenadic.work@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-2 bg-brand-dark/80 px-4 py-2.5 rounded-lg border border-amber-500/30">
+                    <i class="fa-solid fa-house text-brand-500"></i>
+                    <span>Metro Manila, Philippines</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-brand-500 text-white font-semibold hover:bg-brand-600 transition shadow-lg shadow-orange-950/40">View Global Projects</a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-card border border-amber-500/30 text-amber-100 font-semibold hover:bg-surface transition">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 px-6 border-t border-slate-800/60">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                <span class="text-accent font-mono text-xl">01.</span> About Me
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8 items-start">
-                <div class="md:col-span-2 space-y-4 text-slate-300 leading-relaxed">
-                    <p>
-                        I am an accomplished Electrical Design Engineer with a demonstrated history of working in the Building Services Design Consulting Industry[cite: 1]. I have completed and supported diverse projects including commercial and retail buildings, hotel and residential complexes, and healthcare facilities[cite: 1].
-                    </p>
-                    <p>
-                        My work consistently conforms to the requirements of different local and international codes and standards[cite: 1], ensuring precision, efficiency, and full compliance across schematic and construction documentation phases.
-                    </p>
+    <!-- About & Licenses Section -->
+    <section id="about" class="relative z-10 py-24 px-6 bg-card text-slate-100 border-t border-brand-800">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="text-brand-500 font-mono text-xl">01.</span> Profile Summary
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    Experienced Electrical Design Engineer with a demonstrated history of working in the Building Services Design Consulting Industry. With a passion for designing efficient and innovative electrical systems, I am dedicated to delivering quality solutions that meet the specific needs of each client. I have completed a wide range of projects including commercial and retail buildings, residential complexes, and healthcare facilities conforming to local and international codes and standards.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Licenses Card -->
+                <div class="bg-surface p-6 rounded-xl border border-amber-500/20 space-y-4">
+                    <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-certificate"></i> Professional Licenses
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                            <span class="font-medium text-white">Registered Electrical Engineer (REE)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                            <span class="font-medium text-white">Registered Master Electrician (RME)</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-card p-6 rounded-xl border border-slate-800 space-y-4">
-                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-2">Education</h3>
-                    <div class="text-sm text-slate-400">
-                        <p class="font-medium text-slate-200">B.S. in Electrical Engineering</p>
-                        <p>Bicol University (2011 – 2016)</p>
-                    </div>
+
+                <!-- Education Card -->
+                <div class="bg-surface p-6 rounded-xl border border-amber-500/20 space-y-4">
+                    <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i> Education & Training
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <div>
+                            <p class="font-medium text-white">Bachelor of Science in Electrical Engineering</p>
+                            <p class="text-xs text-amber-200/80">Bicol University (2011 – 2016)</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-white">Electrical Installation and Maintenance NCII</p>
+                            <p class="text-xs text-amber-200/80">TESDA-Daraga (2015)</p>
+                        </div>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/50">
+    <!-- Technical Skills Section -->
+    <section id="skills" class="relative z-10 py-24 px-6 bg-brand-dark/50 border-t border-brand-800">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 flex items-center gap-3">
-                <span class="text-accent font-mono text-xl">02.</span> Technical Skills & Software
+                <span class="text-brand-500 font-mono text-xl">02.</span> Technical Software & Skills
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-drafting-compass"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">AutoCAD</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-drafting-compass text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">AutoCAD</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-cube"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">Autodesk Revit</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-cube text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">Autodesk Revit</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-lightbulb"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">Dialux / Elumtools</span>
+                <div class="fa-solid fa-lightbulb text-brand-500 text-2xl mb-2 bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <p class="text-sm font-semibold text-white">DiaLUX & Elumtools</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-bolt"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">ETAP & SKM</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-bolt text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">SKM & ETAP</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-file-lines"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">Bluebeam</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-file-pdf text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">Bluebeam</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-chart-bar"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">AG132 / Visual Lighting</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-chart-line text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">AG132 / Visual Lighting</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-shield-check"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">Title 24 & COMCheck</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-clipboard-check text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">COMCheck & Title 24</p>
                 </div>
-                <div class="bg-card p-4 rounded-xl border border-slate-800 text-center hover:border-slate-700 transition">
-                    <div class="text-accent text-xl mb-2"><i class="fa-solid fa-network-wired"></i></div>
-                    <span class="text-sm text-slate-200 font-medium">Aconex / Layouts</span>
+                <div class="bg-card p-4 rounded-xl border border-amber-500/20 text-center hover:border-brand-500 transition">
+                    <i class="fa-solid fa-network-wired text-brand-500 text-2xl mb-2"></i>
+                    <p class="text-sm font-semibold text-white">Aconex / Electrical Layout</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-24 px-6 border-t border-slate-800/60">
+    <!-- Global Project Portfolio Section -->
+    <section id="projects" class="relative z-10 py-24 px-6 bg-card border-t border-brand-800">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+                <span class="text-brand-500 font-mono text-xl">03.</span> Featured Global Projects
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Philippines -->
+                <div class="bg-surface p-6 rounded-xl border border-amber-500/20 space-y-3">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Philippines</span>
+                    <h3 class="text-xl font-bold text-white">Commercial, Institutional & Infrastructure</h3>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>12-Storey U.P. Main Library</li>
+                        <li>Triplex Warehouse Development</li>
+                        <li>Monocrete Warehouse</li>
+                        <li>DILG Regional Office / Dormitory</li>
+                        <li>Dagupan City Center 10-Storey</li>
+                        <li>Honda Motor World Office</li>
+                        <li>NAIA T3 Airport Land Development</li>
+                        <li>RPI Depot & 10-Storey Maldives Mixed-Use Bldg</li>
+                        <li>Romantic Donkatsu & BDO Center</li>
+                    </ul>
+                </div>
+
+                <!-- Australia -->
+                <div class="bg-surface p-6 rounded-xl border border-amber-500/20 space-y-3">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">NSW, Australia</span>
+                    <h3 class="text-xl font-bold text-white">Educational & Mixed-Use Infrastructure</h3>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>Green Square (20 Storey Mixed-Used Bldg)</li>
+                        <li>Murwillumbah Education Campus</li>
+                        <li>Wee Waa High School</li>
+                        <li>Galungara Public School</li>
+                        <li>UNSW Goodsell GF Student Services</li>
+                        <li>UNSW Morgen Brown Kensington Campus</li>
+                        <li>Opal Healthcare Carlingford Greens Care Community</li>
+                    </ul>
+                </div>
+
+                <!-- Hawaii -->
+                <div class="bg-surface p-6 rounded-xl border border-amber-500/20 space-y-3">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Hawaii, USA</span>
+                    <h3 class="text-xl font-bold text-white">Hospitality & Commercial Facilities</h3>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>Turtle Bay Resort and Hotel Renovation</li>
+                        <li>Saipan Globe Hotel</li>
+                        <li>Hawaiian Airlines Renovation</li>
+                        <li>Starbucks - Westin Maui</li>
+                        <li>Roosevelt High School Gym</li>
+                        <li>Kona Pain Management Clinic</li>
+                        <li>Kukio M Residences</li>
+                    </ul>
+                </div>
+
+                <!-- Texas & Nevada -->
+                <div class="bg-surface p-6 rounded-xl border border-amber-500/20 space-y-3">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">Texas & Nevada, USA</span>
+                    <h3 class="text-xl font-bold text-white">Multi-Family Residential & Retail</h3>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>Allen City Residential (2 Blocks, 4-Storey)</li>
+                        <li>Painted Tree & Peach Grove Residential</li>
+                        <li>Saginaw Amenity Center & Morgan Apartments</li>
+                        <li>Ridgeline Vista Townhomes & Paws Diner</li>
+                        <li>Love's Retail (Valdosta, Good Hope, Mandeville)</li>
+                        <li>Storybook Chapel & Bojangles (Nevada)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="relative z-10 py-24 px-6 bg-brand-dark/50 border-t border-brand-800">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 flex items-center gap-3">
-                <span class="text-accent font-mono text-xl">03.</span> Professional Experience
+                <span class="text-brand-500 font-mono text-xl">04.</span> Professional Experience
             </h2>
-            <div class="space-y-8 border-l border-slate-800 pl-6 ml-2">
+            <div class="space-y-8 border-l border-amber-500/30 pl-6 ml-2">
                 <!-- Job 1 -->
                 <div class="relative space-y-2">
-                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-dark"></div>
-                    <span class="text-xs font-mono text-accent">June 2025 - Present</span>
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-brand-500 ring-4 ring-brand-900"></div>
+                    <span class="text-xs font-mono text-amber-300">June 2025 - Present</span>
                     <h3 class="text-xl font-bold text-white">Senior Electrical Design Engineer</h3>
-                    <p class="text-sm font-medium text-slate-400">PBS Engineers, Inc. (CA, USA)[cite: 1]</p>
+                    <p class="text-sm font-medium text-amber-200/80">PBS Engineers, Inc. (CA, USA)</p>
                     <p class="text-sm text-slate-300 pt-2 leading-relaxed">
-                        Produces electrical designs aligned with project requirements from schematic through construction documentation. Supports construction phase activities including RFI responses and shop drawing reviews, coordinates with multidisciplinary teams, ensures code compliance, and mentors junior staff[cite: 1].
+                        Produces electrical designs aligned with project requirements from schematic through construction documentation. Coordinates with multidisciplinary teams, handles RFI responses, shop drawing reviews, and mentors junior staff.
                     </p>
                 </div>
 
                 <!-- Job 2 -->
                 <div class="relative space-y-2">
-                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-dark"></div>
-                    <span class="text-xs font-mono text-accent">Jan 2023 - May 2025</span>
-                    <h3 class="text-xl font-bold text-white">Lead Engineer / Senior Electrical Design Engineer</h3>
-                    <p class="text-sm font-medium text-slate-400">RTM Engineering Consultants (USA)[cite: 1]</p>
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-amber-600 ring-4 ring-brand-900"></div>
+                    <span class="text-xs font-mono text-amber-300">Jan 2023 - May 2025</span>
+                    <h3 class="text-xl font-bold text-white">Lead Engineer / Senior Electrical Design Engr.</h3>
+                    <p class="text-sm font-medium text-amber-200/80">RTM Engineering Consultants (USA)</p>
                     <p class="text-sm text-slate-300 pt-2 leading-relaxed">
-                        Managed complete electrical design layout plans from schematic to construction documents. Managed and collaborated with IPM, LPM, and team workloads for quality control processes, scheduling, and standardizing work rules[cite: 1].
+                        Managed complete electrical layout plans and team workloads across IPM and LPM studios for quality control, scheduling, and post-design consultations.
                     </p>
                 </div>
 
                 <!-- Job 3 -->
                 <div class="relative space-y-2">
-                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-dark"></div>
-                    <span class="text-xs font-mono text-accent">March 2022 - Dec 2022</span>
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-amber-600 ring-4 ring-brand-900"></div>
+                    <span class="text-xs font-mono text-amber-300">March 2022 - Dec 2022</span>
                     <h3 class="text-xl font-bold text-white">Electrical Design Engineer</h3>
-                    <p class="text-sm font-medium text-slate-400">JHA Consulting Engineers (NSW, Australia)[cite: 1]</p>
+                    <p class="text-sm font-medium text-amber-200/80">JHA Consulting Engineers (NSW, Australia)</p>
                     <p class="text-sm text-slate-300 pt-2 leading-relaxed">
-                        Prepared electrical design drawings in strict accordance with Australian Standards[cite: 1].
+                        Prepared detailed electrical design drawings conforming to Australian Standards.
                     </p>
                 </div>
 
                 <!-- Job 4 -->
                 <div class="relative space-y-2">
-                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-dark"></div>
-                    <span class="text-xs font-mono text-accent">Jan 2019 - Mar 2022</span>
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-amber-600 ring-4 ring-brand-900"></div>
+                    <span class="text-xs font-mono text-amber-300">Jan 2019 - Mar 2022</span>
                     <h3 class="text-xl font-bold text-white">Intermediate Electrical Design Engineer</h3>
-                    <p class="text-sm font-medium text-slate-400">WSP Manila Inc. (Hawaii, USA)[cite: 1]</p>
+                    <p class="text-sm font-medium text-amber-200/80">WSP Manila Inc. (Hawaii, USA)</p>
                     <p class="text-sm text-slate-300 pt-2 leading-relaxed">
-                        Engaged in international electrical design projects including commercial, hotel, and residential buildings and developments[cite: 1].
+                        Designed electrical systems for international commercial, hotel, and residential developments.
                     </p>
                 </div>
 
                 <!-- Job 5 -->
                 <div class="relative space-y-2">
-                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-dark"></div>
-                    <span class="text-xs font-mono text-accent">Oct 2016 - Dec 2018</span>
+                    <div class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-amber-600 ring-4 ring-brand-900"></div>
+                    <span class="text-xs font-mono text-amber-300">Oct 2016 - Dec 2018</span>
                     <h3 class="text-xl font-bold text-white">Junior Electrical Design Engineer</h3>
-                    <p class="text-sm font-medium text-slate-400">ACONG Consulting Inc. (Philippines)[cite: 1]</p>
+                    <p class="text-sm font-medium text-amber-200/80">ACONG Consulting Inc. (Philippines)</p>
                     <p class="text-sm text-slate-300 pt-2 leading-relaxed">
-                        Prepared power supply, distribution systems, and lighting layout drawings conforming to National Building Codes and local regulatory ordinances[cite: 1].
+                        Prepared power supply distribution and lighting systems in accordance with National Building Codes and local ordinances.
                     </p>
                 </div>
             </div>
@@ -193,28 +328,29 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 border-t border-slate-800/60 bg-slate-900/50 text-center">
+    <section id="contact" class="relative z-10 py-24 px-6 bg-card border-t border-brand-800 text-center">
         <div class="max-w-2xl mx-auto space-y-6">
-            <span class="text-accent font-mono text-sm">04. Get In Touch</span>
-            <h2 class="text-3xl font-bold text-white">Let's Connect</h2>
-            <p class="text-slate-400 leading-relaxed">
-                Whether you have an electrical engineering consultation project, collaboration proposal, or want to discuss building services design, my inbox is open.
+            <img src="Karen_Logo.png" alt="Karen Logo" class="h-16 w-16 mx-auto object-contain">
+            <span class="text-brand-500 font-mono text-sm">05. What's Next?</span>
+            <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
+            <p class="text-slate-300 leading-relaxed">
+                Whether you have an upcoming building design project, engineering consultation, or partnership opportunity, feel free to reach out.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="mailto:karenadic.work@gmail.com" class="px-8 py-3 rounded-lg bg-accent text-dark font-semibold hover:bg-sky-400 transition shadow-lg shadow-sky-500/10">
-                    <i class="fa-solid fa-envelope mr-2"></i> Email Me
+                <a href="mailto:karenadic.work@gmail.com" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-brand-500 text-white font-semibold hover:bg-brand-600 transition shadow-lg shadow-orange-950/40">
+                    <i class="fa-solid fa-envelope mr-2"></i> karenadic.work@gmail.com
                 </a>
-                <a href="https://linkedin.com/in/karen-joyce-adic" target="_blank" class="px-8 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 font-semibold hover:bg-slate-700 transition">
+                <a href="https://linkedin.com/in/karen-joyce-adic" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-surface border border-amber-500/30 text-amber-100 font-semibold hover:bg-brand-dark transition">
                     <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn Profile
                 </a>
             </div>
-            <p class="text-xs text-slate-500 pt-2 font-mono">WhatsApp: +63 969 443 1279[cite: 1]</p>
+            <p class="text-xs text-amber-200/70 font-mono pt-4">WhatsApp / Viber: +63 915 083 4988</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-slate-800 text-center text-xs text-slate-500 font-mono">
-        <p>Designed & Built for Karen Joyce Adic © 2026</p>
+    <footer class="relative z-10 py-8 px-6 bg-brand-dark border-t border-brand-800 text-center text-xs text-amber-200/60 font-mono">
+        <p>Karen Joyce Adic — Electrical Design Consultant © 2026</p>
     </footer>
 
 </body>
